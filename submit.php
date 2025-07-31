@@ -1,50 +1,42 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php'; // Or use require 'PHPMailer/src/PHPMailer.php' if manual
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name    = htmlspecialchars(trim($_POST['name']));
-    $email   = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars(trim($_POST['message']));
-
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "Please fill out all fields.";
-        exit;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form | James Dev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e0e1dd;
+      color: #1b263b;
     }
-
-    $mail = new PHPMailer(true);
-    try {
-        // Server settings
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'jdownesmusic@gmail.com';      // Replace with your Gmail
-        $mail->Password   = 'ofcg veji jrnt fuco';         // Use Gmail App Password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
-
-        // Recipients
-        $mail->setFrom($email, $name);
-        $mail->addAddress('your_email@gmail.com', 'James Dev'); // Your receiving email
-
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Message';
-        $mail->Body    = "
-            <h3>Contact Form Submission</h3>
-            <p><strong>Name:</strong> {$name}</p>
-            <p><strong>Email:</strong> {$email}</p>
-            <p><strong>Message:</strong><br>{$message}</p>
-        ";
-
-        $mail->send();
-        echo \"<script>alert('Message sent successfully.');window.location='form.php';</script>\";
-    } catch (Exception $e) {
-        echo \"Message could not be sent. Mailer Error: {$mail->ErrorInfo}\";
+    textarea {
+      resize: none;
     }
-} else {
-    header('Location: form.php');
-    exit;
-}
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-[#e0e1dd]">
+  <div class="w-full max-w-xl p-8 bg-white shadow-2xl rounded-xl border-l-4 border-[#415a77]">
+    <h2 class="text-3xl font-bold mb-6 text-[#415a77] text-center">Get in Touch</h2>
+    
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-5">
+      <input type="text" name="name" placeholder="Your Name" required
+        class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]" />
+      
+      <input type="email" name="email" placeholder="Your Email" required
+        class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]" />
+      
+      <textarea name="message" rows="5" placeholder="Your Message" required
+        class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]"></textarea>
+      
+      <button type="submit"
+        class="w-full bg-[#415a77] text-white py-3 px-6 rounded-md hover:opacity-90 hover:scale-105 transition">
+        Send ✉️
+      </button>
+    </form>
+
+    <p class="text-sm mt-4 text-center text-gray-500">Powered by Formspree</p>
+  </div>
+</body>
+</html>
