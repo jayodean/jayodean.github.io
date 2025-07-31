@@ -12,12 +12,6 @@
     body {
       font-family: 'Fredoka', sans-serif;
     }
-    .skill-box {
-      @apply p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition;
-    }
-    .project-card {
-      @apply bg-white p-6 border-2 border-blue-500 rounded-xl shadow-xl hover:scale-105 transition;
-    }
   </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -25,9 +19,7 @@
   <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <div class="flex items-center">
-          <a href="#" class="text-xl font-bold text-blue-500">James.dev</a>
-        </div>
+        <a href="#" class="text-xl font-bold text-blue-500">James.dev</a>
         <nav class="hidden md:flex space-x-6">
           <a href="#about" class="text-gray-700 hover:text-blue-500 font-medium">About</a>
           <a href="#skills" class="text-gray-700 hover:text-blue-500 font-medium">Skills</a>
@@ -40,7 +32,7 @@
   <div class="h-16"></div>
 
   <section class="relative flex items-center justify-center text-center min-h-screen text-white px-1 py-10">
-    <img class="absolute inset-0 w-full h-full object-cover" src="img/giphy.gif" autoplay loop></img>
+    <img class="absolute inset-0 w-full h-full object-cover" src="img/giphy.gif" alt="Background" />
     <div class="absolute inset-0 bg-black/60 z-0"></div>
     <div class="relative z-10 max-w-3xl px-6">
       <h1 id="hero-heading" class="text-5xl font-extrabold mb-4 opacity-0 transition-opacity duration-700"></h1>
@@ -64,14 +56,14 @@
     <div class="max-w-5xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-blue-500 mb-10">Skills</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        <div class="skill-box" data-aos="zoom-in">HTML</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="100">CSS</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="200">JavaScript</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="300">PHP</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="400">Laravel</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="500">Tailwind</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="600">React</div>
-        <div class="skill-box" data-aos="zoom-in" data-aos-delay="700">Git</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in">HTML</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">CSS</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">JavaScript</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">PHP</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="400">Laravel</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="500">Tailwind</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="600">React</div>
+        <div class="p-5 bg-white border-2 border-blue-500 shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="700">Git</div>
       </div>
     </div>
   </section>
@@ -80,11 +72,11 @@
     <div class="max-w-5xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-blue-500 mb-10">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white p-6 border-2 border-blue-500 rounded-xl shadow-xl hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
           <h3 class="text-xl font-semibold text-blue-500 mb-2">EduManage</h3>
           <p class="text-gray-600">A full-featured teacher dashboard with student, class, and assignment management, built with PHP and AJAX.</p>
         </div>
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-white p-6 border-2 border-blue-500 rounded-xl shadow-xl hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
           <h3 class="text-xl font-semibold text-blue-500 mb-2">Portfolio Site</h3>
           <p class="text-gray-600">A stylish, responsive portfolio built with TailwindCSS and deployed on Netlify with custom domain and SSL.</p>
         </div>
