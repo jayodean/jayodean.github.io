@@ -1,1 +1,66 @@
 
+    :root {
+      --deep-blue: #415a77;
+      --light-blue: #778da9;
+      --off-white: #e0e1dd;
+      --muted-gray: #a9bcd0;
+      --dark-slate: #1b263b;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--off-white);
+      color: var(--dark-slate);
+      background-image: url('abstract-geometric-background-with-dotted-lines-vector-48020931.PNG');
+      background-repeat: repeat;
+      background-size: auto;
+      background-attachment: fixed;
+      animation: panBG 60s linear infinite;
+    }
+
+    @keyframes panBG {
+      0% { background-position: 0 0; }
+      100% { background-position: 100px 100px; }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .text-primary { color: var(--deep-blue); }
+    .bg-primary { background-color: var(--deep-blue); }
+    .bg-muted { background-color: var(--muted-gray); }
+    .text-muted { color: var(--muted-gray); }
+    .text-light { color: var(--off-white); }
+
+    .section {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 4rem 1rem;
+    }
+
+    /* Clean input appearance */
+    input:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    textarea {
+      resize: none;
+      overflow: auto;
+    }
+
+    /* Scroll to Top Animation */
+    #goTopBtn {
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.4s ease-in-out;
+    }
+
+    #goTopBtn.show {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+    }
