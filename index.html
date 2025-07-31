@@ -13,85 +13,90 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="font-[Fredoka] bg-white text-gray-900">
 
   <!-- Hero Section -->
-  <section class="section relative justify-center text-center text-light">
-    <video class="absolute top-0 left-0 w-full h-full object-cover" src="img/giphy.gif" autoplay muted loop playsinline></video>
+  <section class="relative flex items-center justify-center text-center min-h-screen text-white">
+    <video class="absolute inset-0 w-full h-full object-cover" src="img/giphy.gif" autoplay muted loop playsinline></video>
     <div class="absolute inset-0 bg-black/60 z-0"></div>
-    <div class="relative z-10 max-w-3xl">
+    <div class="relative z-10 max-w-3xl px-6">
       <h1 id="hero-heading" class="text-5xl font-extrabold mb-4 opacity-0 transition-opacity duration-700"></h1>
-      <p class="text-xl max-w-xl mx-auto">I build modern, responsive, and user-friendly web experiences.</p>
-      <a href="#contact" class="inline-block mt-6 bg-light text-primary font-semibold px-6 py-3 rounded-full hover:bg-muted transition-all duration-300">Let’s Work Together</a>
+      <p class="text-xl">I build modern, responsive, and user-friendly web experiences.</p>
+      <a href="#contact" class="inline-block mt-6 bg-white text-primary font-semibold px-6 py-3 rounded-full hover:bg-muted transition-all duration-300">
+        Let’s Work Together
+      </a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="section bg-light" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
+  <section id="about" class="section bg-white py-16" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-primary mb-4">About Me</h2>
-      <p class="text-muted text-lg leading-relaxed">
+      <p class="text-gray-600 text-lg leading-relaxed">
         I’m a full-stack web developer passionate about crafting clean, functional, and aesthetically pleasing digital experiences. From backend logic to pixel-perfect frontend, I bring projects to life with Laravel, PHP, JavaScript, and TailwindCSS.
       </p>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section bg-muted" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto text-center">
+  <section id="skills" class="section bg-gray-100 py-16" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-primary mb-10">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-6">
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in">HTML</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">CSS</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">JavaScript</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">PHP</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="400">Laravel</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="500">Tailwind</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="600">React</div>
-        <div class="p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="700">Git</div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <!-- Skill Boxes -->
+        <div class="skill-box" data-aos="zoom-in">HTML</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="100">CSS</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="200">JavaScript</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="300">PHP</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="400">Laravel</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="500">Tailwind</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="600">React</div>
+        <div class="skill-box" data-aos="zoom-in" data-aos-delay="700">Git</div>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section bg-light" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto text-center">
+  <section id="projects" class="section bg-white py-16" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-primary mb-10">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8 px-6">
-        <div class="bg-white p-6 border-2 border-primary rounded-xl shadow-xl hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project Cards -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <h3 class="text-xl font-semibold text-primary mb-2">EduManage</h3>
-          <p class="text-muted">A full-featured teacher dashboard with student, class, and assignment management, built with PHP and AJAX.</p>
+          <p class="text-gray-600">A full-featured teacher dashboard with student, class, and assignment management, built with PHP and AJAX.</p>
         </div>
-        <div class="bg-white p-6 border-2 border-primary rounded-xl shadow-xl hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
           <h3 class="text-xl font-semibold text-primary mb-2">Portfolio Site</h3>
-          <p class="text-muted">A stylish, responsive portfolio built with TailwindCSS and deployed on Netlify with custom domain and SSL.</p>
+          <p class="text-gray-600">A stylish, responsive portfolio built with TailwindCSS and deployed on Netlify with custom domain and SSL.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-<section class="section bg-muted text-center">
-  <div class="max-w-xl mx-auto">
-    <h2 class="text-4xl font-bold mb-6 text-primary">Contact</h2>
-    <p class="text-muted mb-6">Want to reach out? Hit the button below!</p>
-    <a href="form.php" class="inline-block bg-primary text-white py-3 px-6 rounded hover:scale-105 transition">
-      Open Contact Form
-    </a>
-  </div>
-</section>
-
+  <section id="contact" class="section bg-gray-100 py-16 text-center" data-aos="fade-up">
+    <div class="max-w-xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-primary mb-6">Contact</h2>
+      <p class="text-gray-600 mb-6">Want to reach out? Hit the button below!</p>
+      <a href="form.php" class="inline-block bg-primary text-white py-3 px-6 rounded hover:scale-105 transition">
+        Open Contact Form
+      </a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 bg-primary text-off-white text-sm">
-    © 2025 James Dev. Built with ❤️ TailwindCSS.
+  <footer class="text-center py-6 bg-primary text-white text-sm">
+    © 2025 James Dev. Built with ❤️ using TailwindCSS.
   </footer>
 
   <!-- Scroll to Top Button -->
   <button onclick="scrollToTop()" id="goTopBtn"
-    class="fixed bottom-6 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+    class="fixed bottom-6 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300 hidden">
     ⬆️
   </button>
 
@@ -117,12 +122,21 @@
     // Scroll to top button logic
     const goTopBtn = document.getElementById("goTopBtn");
     window.addEventListener("scroll", () => {
-      goTopBtn.classList.toggle("show", window.scrollY > 300);
+      goTopBtn.classList.toggle("hidden", window.scrollY <= 300);
     });
 
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   </script>
+
+  <style>
+    .skill-box {
+      @apply p-5 bg-white border-2 border-primary shadow-xl rounded-xl hover:scale-105 transition;
+    }
+    .project-card {
+      @apply bg-white p-6 border-2 border-primary rounded-xl shadow-xl hover:scale-105 transition;
+    }
+  </style>
 </body>
 </html>
