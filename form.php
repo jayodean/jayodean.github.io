@@ -19,18 +19,24 @@
 <body class="flex items-center justify-center min-h-screen bg-[#e0e1dd]">
   <div class="w-full max-w-xl p-8 bg-white shadow-2xl rounded-xl border-l-4 border-[#415a77]">
     <h2 class="text-3xl font-bold mb-6 text-[#415a77] text-center">Get in Touch</h2>
-    <form action="submit.php" method="POST" class="space-y-5">
+    
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-5">
       <input type="text" name="name" placeholder="Your Name" required
         class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]" />
+      
       <input type="email" name="email" placeholder="Your Email" required
         class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]" />
+      
       <textarea name="message" rows="5" placeholder="Your Message" required
         class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]"></textarea>
+      
       <button type="submit"
         class="w-full bg-[#415a77] text-white py-3 px-6 rounded-md hover:opacity-90 hover:scale-105 transition">
         Send ✉️
       </button>
     </form>
+
+    <p class="text-sm mt-4 text-center text-gray-500">Powered by Formspree</p>
   </div>
 </body>
 </html>
