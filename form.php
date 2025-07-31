@@ -1,4 +1,3 @@
-<!-- form.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,13 +22,10 @@
     <form action="submit.php" method="POST" class="space-y-5">
       <input type="text" name="name" placeholder="Your Name" required
         class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]" />
-      
       <input type="email" name="email" placeholder="Your Email" required
         class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]" />
-      
       <textarea name="message" rows="5" placeholder="Your Message" required
         class="w-full p-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#415a77]"></textarea>
-      
       <button type="submit"
         class="w-full bg-[#415a77] text-white py-3 px-6 rounded-md hover:opacity-90 hover:scale-105 transition">
         Send ✉️
