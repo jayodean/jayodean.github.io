@@ -45,21 +45,53 @@
 
   <div class="h-16"></div>
 
-<section class="relative flex flex-col items-center justify-center text-center min-h-screen h-screen snap-start text-white px-6 py-10 bg-blue-950">
+<section class="relative flex items-center justify-center text-white min-h-screen h-screen snap-start px-6 py-10 bg-blue-950">
+  <!-- Animated Background -->
   <img src="img/giphy.gif" alt="Animated Background" class="absolute inset-0 w-full h-full object-cover" />
   <div class="absolute inset-0 bg-blue-950/80 z-0"></div>
-  
-  <div class="relative z-10 max-w-3xl space-y-10">
-    <h1 id="hero-heading" class="text-5xl font-extrabold mb-4 transition-opacity duration-700"></h1>
-    
-    <p class="text-lg max-w-xl mx-auto text-blue-200 leading-relaxed">
-      I’m a full-stack web developer passionate about crafting clean, functional, and aesthetically pleasing digital experiences. From backend logic to pixel-perfect frontend, I bring projects to life with Laravel, PHP, JavaScript, and TailwindCSS.
-    </p>
 
-    <a href="#contact" class="inline-block mt-6 bg-white text-blue-700 font-semibold px-6 py-3 rounded-full hover:bg-blue-100 transition-all duration-300">
-      Let’s Work Together
-    </a>
+  <!-- Content Grid -->
+  <div class="relative z-10 max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+    <!-- Text Section -->
+    <div class="space-y-6 text-center md:text-left px-4">
+      <h1 id="hero-heading" class="text-5xl font-extrabold transition-opacity duration-700">Hi, I'm James</h1>
+      <p class="text-lg text-blue-200 leading-relaxed">
+        I’m a full-stack web developer passionate about crafting clean, functional, and aesthetically pleasing digital experiences. From backend logic to pixel-perfect frontend, I bring projects to life with Laravel, PHP, JavaScript, and TailwindCSS.
+      </p>
+      <a href="#contact" class="inline-block mt-4 bg-white text-blue-700 font-semibold px-6 py-3 rounded-full hover:bg-blue-100 transition-all duration-300">
+        Let’s Work Together
+      </a>
+    </div>
+
+    <!-- Profile Picture with Animated Border & Hover Effects -->
+    <div class="flex justify-center">
+      <div class="relative group w-52 h-52 md:w-64 md:h-64 rounded-full p-[5px] bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 animate-border">
+        <div class="absolute inset-0 rounded-full bg-[length:200%_200%] animate-borderMotion z-0"></div>
+        <div class="relative z-10 rounded-full overflow-hidden bg-blue-950 p-[3px] transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
+          <img
+            src="img/profile.jpg"
+            alt="James Profile Picture"
+            class="rounded-full w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Animated Border Styles -->
+  <style>
+    @keyframes borderMotion {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animate-borderMotion {
+      background-image: linear-gradient(270deg, #3b82f6, #8b5cf6, #3b82f6);
+      background-size: 600% 600%;
+      animation: borderMotion 6s ease infinite;
+    }
+  </style>
 </section>
 
   <!-- Skills -->
