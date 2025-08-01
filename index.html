@@ -2,17 +2,38 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>James | Web Developer</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            darkBlue: '#22577A',
+            tealBlue: '#38A3A5',
+            mintGreen: '#57CC99',
+            lightGreen: '#80ED99',
+            paleGreen: '#C7F9CC',
+          },
+          keyframes: {
+            'spin-slow': {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+          },
+          animation: {
+            'spin-slow': 'spin-slow 8s linear infinite',
+          },
+        }
+      }
     }
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body {
@@ -20,22 +41,22 @@
     }
   </style>
 </head>
-<body class="bg-white text-blue-950 dark:bg-[#0f172a] dark:text-gray-100 snap-y snap-mandatory overflow-y-scroll h-screen">
+<body class="bg-white text-darkBlue dark:bg-darkBlue dark:text-paleGreen snap-y snap-mandatory overflow-y-scroll h-screen">
 
   <!-- Header (auto-hide + dark mode) -->
-  <header id="navbar" class="bg-white dark:bg-[#0f172a] shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300">
+  <header id="navbar" class="bg-white dark:bg-darkBlue shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <a href="#" class="text-xl font-bold text-blue-700 dark:text-white">James.dev</a>
+        <a href="#" class="text-xl font-bold text-darkBlue dark:text-paleGreen">James.dev</a>
         <nav class="hidden md:flex space-x-6 items-center">
-          <a href="#about" class="text-blue-800 hover:text-blue-600 dark:text-white dark:hover:text-gray-300 font-medium">About</a>
-          <a href="#skills" class="text-blue-800 hover:text-blue-600 dark:text-white dark:hover:text-gray-300 font-medium">Skills</a>
-          <a href="#projects" class="text-blue-800 hover:text-blue-600 dark:text-white dark:hover:text-gray-300 font-medium">Projects</a>
-          <a href="#contact" class="text-blue-800 hover:text-blue-600 dark:text-white dark:hover:text-gray-300 font-medium">Contact</a>
-          <a href="#coffee" class="flex items-center gap-2 text-blue-800 hover:text-blue-600 dark:text-white dark:hover:text-gray-300 font-medium">
+          <a href="#about" class="text-darkBlue hover:text-tealBlue dark:text-paleGreen dark:hover:text-mintGreen font-medium">About</a>
+          <a href="#skills" class="text-darkBlue hover:text-tealBlue dark:text-paleGreen dark:hover:text-mintGreen font-medium">Skills</a>
+          <a href="#projects" class="text-darkBlue hover:text-tealBlue dark:text-paleGreen dark:hover:text-mintGreen font-medium">Projects</a>
+          <a href="#contact" class="text-darkBlue hover:text-tealBlue dark:text-paleGreen dark:hover:text-mintGreen font-medium">Contact</a>
+          <a href="#coffee" class="flex items-center gap-2 text-darkBlue hover:text-tealBlue dark:text-paleGreen dark:hover:text-mintGreen font-medium">
             Buy Me a <img src="img/coffee-cup.png" alt="Coffee" class="w-5 h-5" />
           </a>
-          <button id="darkToggle" class="ml-4 text-blue-800 dark:text-white font-medium hover:text-blue-600 dark:hover:text-gray-300">
+          <button id="darkToggle" class="ml-4 text-darkBlue dark:text-paleGreen font-medium hover:text-tealBlue dark:hover:text-mintGreen">
             🌙
           </button>
         </nav>
@@ -46,94 +67,95 @@
   <div class="h-16"></div>
 
   <!-- Hero -->
-  <section class="relative flex items-center justify-center text-center min-h-screen h-screen snap-start text-white px-1 py-10">
+  <section class="relative flex items-center justify-center text-center min-h-screen h-screen snap-start text-paleGreen px-1 py-10">
     <img src="img/giphy.gif" alt="Animated Background" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-blue-950/70 z-0"></div>
+    <div class="absolute inset-0 bg-darkBlue/80 z-0"></div>
     <div class="relative z-10 max-w-3xl px-6">
       <h1 id="hero-heading" class="text-5xl font-extrabold mb-4 opacity-0 transition-opacity duration-700"></h1>
       <p class="text-xl">I build modern, responsive, and user-friendly web experiences.</p>
-      <a href="#contact" class="inline-block mt-6 bg-white text-blue-700 font-semibold px-6 py-3 rounded-full hover:bg-blue-100 transition-all duration-300">
+      <a href="#contact" class="inline-block mt-6 bg-tealBlue text-white font-semibold px-6 py-3 rounded-full hover:bg-mintGreen transition-all duration-300">
         Let’s Work Together
       </a>
     </div>
   </section>
 
-<section id="about" class="min-h-screen h-screen snap-start flex items-center bg-white dark:bg-[#1a1a2e] py-16 w-full" data-aos="fade-up">
-  <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-10">
-    
-    <!-- Profile Picture with animated ring -->
-    <div class="relative flex-shrink-0">
-      <div class="rounded-full p-1 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 animate-spin-slow">
-        <div class="rounded-full bg-white dark:bg-[#1a1a2e] p-1">
-          <img
-            src="img/profile-picture.png" 
-            alt="James Profile Picture"
-            class="rounded-full w-40 h-40 object-cover"
-          />
+  <!-- About -->
+  <section id="about" class="min-h-screen h-screen snap-start flex items-center bg-paleGreen dark:bg-darkBlue py-16 w-full" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-10">
+
+      <!-- Profile Picture with animated ring -->
+      <div class="relative flex-shrink-0">
+        <div class="rounded-full p-1 bg-gradient-to-r from-darkBlue via-tealBlue to-mintGreen animate-spin-slow">
+          <div class="rounded-full bg-paleGreen dark:bg-darkBlue p-1">
+            <img
+              src="img/profile.jpg"
+              alt="James Profile Picture"
+              class="rounded-full w-40 h-40 object-cover"
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Text Content -->
-    <div class="text-center md:text-left max-w-xl">
-      <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-4">About Me</h2>
-      <p class="text-blue-800 dark:text-gray-300 text-lg leading-relaxed">
-        I’m a full-stack web developer passionate about crafting clean, functional, and aesthetically pleasing digital experiences. From backend logic to pixel-perfect frontend, I bring projects to life with Laravel, PHP, JavaScript, and TailwindCSS.
-      </p>
-    </div>
+      <!-- Text Content -->
+      <div class="text-center md:text-left max-w-xl">
+        <h2 class="text-4xl font-bold text-darkBlue dark:text-mintGreen mb-4">About Me</h2>
+        <p class="text-darkBlue dark:text-paleGreen text-lg leading-relaxed">
+          I’m a full-stack web developer passionate about crafting clean, functional, and aesthetically pleasing digital experiences. From backend logic to pixel-perfect frontend, I bring projects to life with Laravel, PHP, JavaScript, and TailwindCSS.
+        </p>
+      </div>
 
-  </div>
-</section>
+    </div>
+  </section>
 
   <!-- Skills -->
-  <section id="skills" class="min-h-screen h-screen snap-start flex items-center bg-blue-50 dark:bg-[#1a1a2e] py-16 w-full" data-aos="fade-up">
+  <section id="skills" class="min-h-screen h-screen snap-start flex items-center bg-paleGreen dark:bg-darkBlue py-16 w-full" data-aos="fade-up">
     <div class="max-w-5xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-10">Skills</h2>
+      <h2 class="text-4xl font-bold text-darkBlue dark:text-mintGreen mb-10">Skills</h2>
       <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition">HTML</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="100">CSS</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="200">JavaScript</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="300">PHP</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="400">Laravel</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="500">Tailwind CSS</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="600">React</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="700">Git</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="800">WordPress</div>
-        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="900">C++</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition">HTML</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="100">CSS</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="200">JavaScript</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="300">PHP</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="400">Laravel</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="500">Tailwind CSS</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="600">React</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="700">Git</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="800">WordPress</div>
+        <div class="p-5 bg-white dark:bg-[#1e293b] border-2 border-darkBlue shadow-xl rounded-xl hover:scale-105 transition" data-aos-delay="900">C++</div>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="min-h-screen h-screen snap-start flex items-center bg-white dark:bg-[#1a1a2e] py-16 w-full" data-aos="fade-up">
+  <section id="projects" class="min-h-screen h-screen snap-start flex items-center bg-paleGreen dark:bg-darkBlue py-16 w-full" data-aos="fade-up">
     <div class="max-w-5xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-10">Projects</h2>
+      <h2 class="text-4xl font-bold text-darkBlue dark:text-mintGreen mb-10">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white dark:bg-[#1e293b] p-6 border-2 border-blue-600 rounded-xl shadow-xl hover:scale-105 transition" data-aos-delay="100">
-          <h3 class="text-xl font-semibold text-blue-700 dark:text-white mb-2">EduManage</h3>
-          <p class="text-blue-800 dark:text-gray-300">A full-featured teacher dashboard with student, class, and assignment management, built with PHP and AJAX.</p>
+        <div class="bg-white dark:bg-[#1e293b] p-6 border-2 border-darkBlue rounded-xl shadow-xl hover:scale-105 transition" data-aos-delay="100">
+          <h3 class="text-xl font-semibold text-darkBlue dark:text-paleGreen mb-2">EduManage</h3>
+          <p class="text-darkBlue dark:text-paleGreen">A full-featured teacher dashboard with student, class, and assignment management, built with PHP and AJAX.</p>
         </div>
-        <div class="bg-white dark:bg-[#1e293b] p-6 border-2 border-blue-600 rounded-xl shadow-xl hover:scale-105 transition" data-aos-delay="200">
-          <h3 class="text-xl font-semibold text-blue-700 dark:text-white mb-2">Portfolio Site</h3>
-          <p class="text-blue-800 dark:text-gray-300">A stylish, responsive portfolio built with TailwindCSS and deployed on Netlify with custom domain and SSL.</p>
+        <div class="bg-white dark:bg-[#1e293b] p-6 border-2 border-darkBlue rounded-xl shadow-xl hover:scale-105 transition" data-aos-delay="200">
+          <h3 class="text-xl font-semibold text-darkBlue dark:text-paleGreen mb-2">Portfolio Site</h3>
+          <p class="text-darkBlue dark:text-paleGreen">A stylish, responsive portfolio built with TailwindCSS and deployed on Netlify with custom domain and SSL.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="min-h-screen h-screen snap-start flex items-center bg-blue-50 dark:bg-[#1a1a2e] py-16 text-center w-full" data-aos="fade-up">
+  <section id="contact" class="min-h-screen h-screen snap-start flex items-center bg-paleGreen dark:bg-darkBlue py-16 text-center w-full" data-aos="fade-up">
     <div class="max-w-xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-6">Contact</h2>
-      <p class="text-blue-800 dark:text-gray-300 mb-6">Want to reach out? Hit the button below!</p>
-      <a href="form.html" class="inline-block bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700 transition">
+      <h2 class="text-4xl font-bold text-darkBlue dark:text-mintGreen mb-6">Contact</h2>
+      <p class="text-darkBlue dark:text-paleGreen mb-6">Want to reach out? Hit the button below!</p>
+      <a href="form.html" class="inline-block bg-tealBlue text-white py-3 px-6 rounded hover:bg-mintGreen transition">
         Open Contact Form
       </a>
 
       <!-- Buy Me a Coffee -->
       <div class="mt-10" id="coffee">
         <a href="https://www.buymeacoffee.com/jamesdownes" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 bg-yellow-400 text-black font-semibold px-5 py-3 rounded-full hover:bg-yellow-300 transition">
+           class="inline-flex items-center gap-2 bg-lightGreen text-darkBlue font-semibold px-5 py-3 rounded-full hover:bg-mintGreen transition">
           <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy Me a Coffee" class="w-6 h-6" />
           Buy Me a Coffee
         </a>
@@ -142,23 +164,23 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#0f172a] text-gray-300 py-8 mt-16">
+  <footer class="bg-darkBlue text-paleGreen py-8 mt-16">
     <div class="container mx-auto px-4 text-center space-y-4">
       <div class="space-x-6 text-sm">
-        <a href="#about" class="hover:text-techBlue">About</a>
-        <a href="#skills" class="hover:text-techBlue">Skills</a>
-        <a href="#projects" class="hover:text-techBlue">Projects</a>
-        <a href="#contact" class="hover:text-techBlue">Contact</a>
-        <a href="mailto:you@example.com" class="hover:text-techBlue">Email</a>
-        <a href="/resume.pdf" class="hover:text-techBlue" download>Resume</a>
+        <a href="#about" class="hover:text-tealBlue">About</a>
+        <a href="#skills" class="hover:text-tealBlue">Skills</a>
+        <a href="#projects" class="hover:text-tealBlue">Projects</a>
+        <a href="#contact" class="hover:text-tealBlue">Contact</a>
+        <a href="mailto:you@example.com" class="hover:text-tealBlue">Email</a>
+        <a href="/resume.pdf" class="hover:text-tealBlue" download>Resume</a>
       </div>
-      <p class="text-xs text-gray-500">&copy; 2025 James Dev. All rights reserved.</p>
+      <p class="text-xs text-paleGreen">&copy; 2025 James Dev. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- Back to Top -->
   <button onclick="scrollToTop()" id="goTopBtn"
-          class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300 hidden">
+          class="fixed bottom-6 right-6 z-50 bg-darkBlue text-paleGreen p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300 hidden">
     ⬆️
   </button>
 
@@ -195,7 +217,7 @@
       document.documentElement.classList.toggle('dark');
     });
 
-    // Navbar auto-hide
+    // Navbar auto-hide on scroll
     let lastScroll = 0;
     const navbar = document.getElementById("navbar");
 
@@ -205,7 +227,6 @@
         navbar.style.transform = "translateY(0)";
         return;
       }
-
       if (currentScroll > lastScroll) {
         navbar.style.transform = "translateY(-100%)";
       } else {
