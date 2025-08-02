@@ -150,19 +150,34 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#ffffff] text-black-300 py-8 mt-16">
-    <div class="container mx-auto px-4 text-center space-y-4">
-      <div class="space-x-6 text-sm">
-        <a href="#about" class="hover:text-techBlue">About</a>
-        <a href="#skills" class="hover:text-techBlue">Skills</a>
-        <a href="#projects" class="hover:text-techBlue">Projects</a>
-        <a href="#contact" class="hover:text-techBlue">Contact</a>
-        <a href="mailto:you@example.com" class="hover:text-techBlue">Email</a>
-        <a href="/resume.pdf" class="hover:text-techBlue" download>Resume</a>
-      </div>
-      <p class="text-xs text-black-500">&copy; 2025 James Dev. All rights reserved.</p>
+<!-- Font Awesome CDN (Add in <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<footer class="bg-gray-900 text-white py-6">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <p class="mb-4 md:mb-0 text-center md:text-left">&copy; 2025 Your Name. All rights reserved.</p>
+    
+    <div class="flex space-x-4">
+      <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"
+         class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"
+         class="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"
+         class="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:youremail@example.com" aria-label="Email"
+         class="bg-red-500 hover:bg-red-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
   <!-- Back to Top Button -->
   <button onclick="scrollToTop()" id="goTopBtn"
