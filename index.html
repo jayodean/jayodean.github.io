@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>James | Web Developer</title>
 
-  <!-- Fonts & Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -14,7 +13,6 @@
     tailwind.config = { darkMode: 'class' };
   </script>
 
-  <!-- Custom Font -->
   <style>
     body {
       font-family: 'Fredoka', sans-serif;
@@ -22,8 +20,6 @@
   </style>
 </head>
 <body class="bg-white text-blue-950 dark:bg-[#0f172a] dark:text-gray-100 snap-y snap-mandatory overflow-y-scroll h-screen">
-
-  <!-- Navbar -->
   <header id="navbar" class="bg-white dark:bg-[#0f172a] shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -42,16 +38,13 @@
     </div>
   </header>
 
-  <!-- Spacer -->
   <div class="h-16"></div>
 
-  <!-- Hero Section -->
   <section class="relative flex items-center justify-center text-white min-h-screen h-screen snap-start px-6 py-10 bg-blue-950">
     <img src="img/giphy.gif" alt="Animated Background" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-blue-950/80 z-0"></div>
 
     <div class="relative z-10 max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
-      <!-- Text -->
       <div class="space-y-6 text-center md:text-left px-4">
         <h1 id="hero-heading" class="text-5xl font-extrabold transition-opacity duration-700"></h1>
         <p class="text-lg text-blue-200 leading-relaxed">
@@ -59,8 +52,6 @@
         </p>
         <a href="#contact" class="cta-button">Let’s Work Together</a>
       </div>
-
-      <!-- Profile Picture -->
       <div class="flex justify-center">
         <div class="relative group w-52 h-52 md:w-64 md:h-64 rounded-full p-[5px] bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 animate-border">
           <div class="absolute inset-0 rounded-full bg-[length:200%_200%] animate-borderMotion z-0"></div>
@@ -71,7 +62,6 @@
       </div>
     </div>
 
-    <!-- Animated Border Keyframes -->
     <style>
       @keyframes borderMotion {
         0% { background-position: 0% 50%; }
@@ -95,12 +85,10 @@
     </style>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills" class="min-h-screen h-screen snap-start flex items-center bg-blue-50 dark:bg-[#1a1a2e] py-16 w-full" data-aos="fade-up">
     <div class="max-w-5xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-10">Skills</h2>
       <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
-        <!-- Repeated Skill Box -->
         <div class="skill-box">HTML</div>
         <div class="skill-box" data-aos-delay="100">CSS</div>
         <div class="skill-box" data-aos-delay="200">JavaScript</div>
@@ -115,7 +103,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="min-h-screen h-screen snap-start flex items-center bg-white dark:bg-[#1a1a2e] py-16 w-full" data-aos="fade-up">
     <div class="max-w-5xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-10">Projects</h2>
@@ -132,14 +119,11 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="min-h-screen h-screen snap-start flex items-center bg-blue-50 dark:bg-[#1a1a2e] py-16 text-center w-full" data-aos="fade-up">
     <div class="max-w-xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-6">Contact</h2>
       <p class="text-blue-800 dark:text-gray-300 mb-6">Want to reach out? Hit the button below!</p>
       <a href="form.html" class="cta-button">Open Contact Form</a>
-
-      <!-- Buy Me a Coffee -->
       <div class="mt-10" id="coffee">
         <a href="https://www.buymeacoffee.com/jamesdownes" target="_blank" rel="noopener"
            class="inline-flex items-center gap-2 bg-yellow-400 text-black font-semibold px-5 py-3 rounded-full hover:bg-yellow-300 transition">
@@ -150,44 +134,38 @@
     </div>
   </section>
 
-<footer class="bg-gray-900 text-white py-6">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-    <p class="mb-4 md:mb-0 text-center md:text-left">&copy; 2025 Your Name. All rights reserved.</p>
-    
-    <div class="flex space-x-4">
-      <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"
-         class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"
-         class="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"
-         class="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="mailto:youremail@example.com" aria-label="Email"
-         class="bg-red-500 hover:bg-red-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
-        <i class="fas fa-envelope"></i>
-      </a>
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p class="mb-4 md:mb-0 text-center md:text-left">&copy; 2025 Your Name. All rights reserved.</p>
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"
+           class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"
+           class="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"
+           class="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:youremail@example.com" aria-label="Email"
+           class="bg-red-500 hover:bg-red-600 text-white rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-
-  <!-- Back to Top Button -->
   <button onclick="scrollToTop()" id="goTopBtn"
           class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300 hidden">
     ⬆️
   </button>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-
-    // Typing effect
     const text = "Hi, I'm James";
     const heading = document.getElementById("hero-heading");
     let i = 0;
@@ -200,8 +178,6 @@
       }
     }
     window.addEventListener("load", type);
-
-    // Scroll to top visibility
     const goTopBtn = document.getElementById("goTopBtn");
     window.addEventListener("scroll", () => {
       goTopBtn.classList.toggle("hidden", window.scrollY <= 300);
@@ -209,13 +185,9 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-
-    // Dark mode toggle
     document.getElementById('darkToggle').addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
     });
-
-    // Navbar auto-hide
     let lastScroll = 0;
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
@@ -225,7 +197,6 @@
     });
   </script>
 
-  <!-- Utilities -->
   <style>
     .skill-box {
       @apply p-5 bg-white dark:bg-[#1e293b] border-2 border-blue-600 shadow-xl rounded-xl hover:scale-105 transition;
