@@ -164,38 +164,9 @@
   </button>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const text = "Hi, I'm James";
-    const heading = document.getElementById("hero-heading");
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        heading.textContent += text.charAt(i);
-        heading.classList.add("opacity-100");
-        i++;
-        setTimeout(type, 75);
-      }
-    }
-    window.addEventListener("load", type);
-    const goTopBtn = document.getElementById("goTopBtn");
-    window.addEventListener("scroll", () => {
-      goTopBtn.classList.toggle("hidden", window.scrollY <= 300);
-    });
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    document.getElementById('darkToggle').addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
-    let lastScroll = 0;
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
-      navbar.style.transform = currentScroll > lastScroll ? "translateY(-100%)" : "translateY(0)";
-      lastScroll = currentScroll;
-    });
-  </script>
+  <script src="main.js"></script>
+  <script src="theme.js"></script>
+
 
   <style>
     .skill-box {
