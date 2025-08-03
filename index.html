@@ -77,18 +77,38 @@
         <p class="text-lg text-blue-200 leading-relaxed">
           I’m a full-stack web developer passionate about crafting clean, functional, and aesthetically pleasing digital experiences. From backend logic to pixel-perfect frontend, I bring projects to life with Laravel, PHP, JavaScript, and TailwindCSS.
         </p>
-      <form
-      action="https://formspree.io/f/mqalqgzy"
-      method="POST"
-      >
-      <label>
+<form
+  action="https://formspree.io/f/mqalqgzy"
+  method="POST"
+  class="max-w-xl mx-auto p-6 bg-white/80 dark:bg-gray-800/70 backdrop-blur-md rounded-lg shadow-md space-y-4"
+>
+  <div class="flex flex-col">
+    <label for="email" class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
       Your email:
-      <input type="email" name="email">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-        </label>
+    </label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      class="px-4 py-2 rounded-md bg-white/90 dark:bg-gray-900/60 text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="you@example.com"
+    />
+  </div>
+
+  <div class="flex flex-col">
+    <label for="message" class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+      Your message:
+    </label>
+    <textarea
+      name="message"
+      id="message"
+      rows="5"
+      required
+      class="px-4 py-2 rounded-md bg-white/70 dark:bg-gray-900/40 text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+      placeholder="Write your message here..."
+    ></textarea>
+  </div>
         <button type="submit" class="cta-button animate-bounce-delayed">Let’s Work Together</button>
         <style>.animate-bounce-delayed {animation: bounce-delayed-smooth 5s cubic-bezier(0.25, 1.5, 0.5, 1) infinite;}</style>
         </form>
